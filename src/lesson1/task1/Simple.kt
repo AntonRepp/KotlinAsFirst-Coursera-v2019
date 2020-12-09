@@ -49,10 +49,15 @@ fun quadraticRootProduct(a: Double, b: Double, c: Double): Double {
  * Пример главной функции
  */
 fun main() {
-    val x1x2 = quadraticRootProduct(1.0, 13.0, 42.0)
-    println("Root product: $x1x2")
-    val SecondsCount = seconds(8, 20, 35)
-    println("Число секунд: $SecondsCount")
+//    val x1x2 = quadraticRootProduct(1.0, 13.0, 42.0)
+//    println("Root product: $x1x2")
+//    val SecondsCount = seconds(8, 20, 35)
+//    println("Число секунд: $SecondsCount")
+//    val factor=7
+//    val result=factor*factor
+//    println("$factor * $factor = $result")
+    val angle = angleInRadian(36, 14, 35)
+    println ("Угол в радианах $angle")
 }
 
 /**
@@ -78,7 +83,14 @@ fun lengthInMeters(sagenes: Int, arshins: Int, vershoks: Int): Double = TODO()
  * Пользователь задает угол в градусах, минутах и секундах (например, 36 градусов 14 минут 35 секунд).
  * Вывести значение того же угла в радианах (например, 0.63256).
  */
-fun angleInRadian(deg: Int, min: Int, sec: Int): Double = TODO()
+fun angleInRadian(deg: Int, min: Int, sec: Int): Double
+{
+    val floatDeg = deg.toDouble()
+    val floatMin = min.toDouble()
+    val floatSec = sec.toDouble()
+    return ((floatDeg*3600+floatMin*60+floatSec)/3600/180*PI)
+}
+
 
 /**
  * Тривиальная
